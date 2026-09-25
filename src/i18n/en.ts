@@ -26,7 +26,7 @@ export const en: Dictionary = {
 	hero: {
 		pill: "Come. Make an impact here",
 		title: "Your experience matters<br />in Ukraine",
-		lead: "Wherever your career is taking you, it can lead you to Ukraine. Back2Impact Ukraine helps you find where your experience will be most valuable — in jobs, internships and projects shaping the country’s future.",
+		lead: "Back2Impact Ukraine is a platform that helps you find where your experience will be most valuable—in jobs, internships, and projects that are shaping the country’s future. Leave your contact information and be among the first to learn about the launch of Back2Impact Ukraine and new opportunities in Ukraine.",
 	},
 	how: {
 		pill: "How it works",
@@ -150,7 +150,7 @@ export const en: Dictionary = {
 	},
 	waitlist: {
 		title: "Ready to take the first step?",
-		lead: "Leave your contact details and be among the first to hear about the launch of Back2Impact Ukraine and new opportunities in Ukraine",
+		lead: "No matter where your career takes you, it may lead you to Ukraine. Be among the first to join.",
 	},
 	footer: {
 		title: "Have questions? <br /> Write to us",
