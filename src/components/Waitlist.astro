@@ -1,0 +1,19 @@
+---
+import { getDictionary } from "../i18n";
+
+const t = getDictionary(Astro.currentLocale);
+---
+
+<section class="waitlist" id="waitlist">
+	<div class="container waitlist__inner">
+		<h2 class="waitlist__title">{t.waitlist.title}</h2>
+		<p class="waitlist__lead">{t.waitlist.lead}</p>
+
+		<div class="waitlist__links">
+			<a href="#" target="_blank" rel="noopener noreferrer" class="waitlist__link">{t.actions.join}</a>
+			<a href="#" target="_blank" rel="noopener noreferrer" class="waitlist__link waitlist__link--second"
+				>{t.actions.findTalent}</a
+			>
+		</div>
+	</div>
+</section>

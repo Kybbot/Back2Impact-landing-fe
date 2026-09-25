@@ -1,0 +1,21 @@
+---
+import { getDictionary } from "../i18n";
+
+const t = getDictionary(Astro.currentLocale);
+---
+
+<footer class="footer" id="contact">
+	<div class="footer__container">
+		<div class="footer__content-container">
+			<div class="footer__dec footer__dec1"></div>
+			<div class="footer__dec footer__dec2"></div>
+			<div class="footer__dec footer__dec3"></div>
+
+			<h2 class="footer__title" set:html={t.footer.title} />
+
+			<a class="footer__email" href="mailto:info@ugs.foundation">info@ugs.foundation</a>
+		</div>
+		<p class="footer__text">{t.footer.text}</p>
+		<p class="footer__subText">© 2026 Ukraine Global Scholars</p>
+	</div>
+</footer>

@@ -1,0 +1,9 @@
+@import "./fonts.css";
+@import "./base.css";
+@import "./components/navbar.css";
+@import "./components/hero.css";
+@import "./components/how-it-works.css";
+@import "./components/about.css";
+@import "./components/faq.css";
+@import "./components/waitlist.css";
+@import "./components/footer.css";

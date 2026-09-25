@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import mobileMenuIcon from "../assets/images/mobile-menu-icon.svg";
+import { getDictionary } from "../i18n";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+
+const t = getDictionary(Astro.currentLocale);
+---
+
+<header class="navbar">
+	<div class="navbar__bar">
+		<a class="navbar__logo" href="#top" aria-label={t.nav.home}>Back2Impact</a>
+
+		<nav class="navbar__links" aria-label={t.nav.primary}>
+			{
+				t.nav.links.map((link) => (
+					<a class="navbar__link" href={link.href}>
+						{link.label}
+					</a>
+				))
+			}
+		</nav>
+
+		<div class="navbar__join-container">
+			<LanguageSwitcher />
+		</div>
+
+		<button class="navbar__mobile-menu-btn" type="button" aria-label={t.nav.menu} aria-expanded="false">
+			<Image src={mobileMenuIcon} alt="" class="navbar__mobile-menu-icon" />
+		</button>
+
+		<nav class="navbar__mobile-menu" aria-label={t.nav.mobile} hidden>
+			{
+				t.nav.links.map((link) => (
+					<a class="navbar__link" href={link.href}>
+						{link.label}
+					</a>
+				))
+			}
+			<LanguageSwitcher />
+		</nav>
+	</div>
+</header>
+
+<script>
+	const button = document.querySelector<HTMLButtonElement>(".navbar__mobile-menu-btn");
+	const menu = document.querySelector<HTMLElement>(".navbar__mobile-menu");
+
+	button?.addEventListener("click", () => {
+		if (!menu) return;
+		menu.hidden = !menu.hidden;
+		button.setAttribute("aria-expanded", String(!menu.hidden));
+	});
+</script>

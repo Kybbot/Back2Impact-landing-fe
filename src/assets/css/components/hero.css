@@ -1,0 +1,129 @@
+.hero {
+	background: #2A69CE;
+	padding-top: 98px;
+	padding-bottom: 183px;
+	text-align: center;
+	position: relative;
+}
+
+.hero__inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.hero__dec {
+	width: 56px;
+	height: 170px;
+	position: absolute;
+	border-radius: 16px;
+}
+
+.hero__dec1 {
+	top: -120px;
+	right: -20px;
+	background-color: #0751C7;
+	transform: rotate(95.3deg);
+}
+
+.hero__dec2 {
+	left: 0;
+	top: 180px;
+	background-color: #FFD76F;
+	transform: rotate(-133.65deg);
+}
+
+.hero__dec3 {
+	top: 180px;
+	left: 175px;
+	background-color: #5587D8;
+	transform: rotate(174.94deg);
+}
+
+.hero__dec4 {
+	top: 340px;
+	left: 100px;
+	background-color: #0751C7;
+	transform: rotate(160.82deg);
+}
+
+.hero .pill {
+	padding: 8px 17px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 130%;
+	letter-spacing: -2%;
+}
+
+.hero__title {
+	margin-top: 16px;
+	font-weight: 700;
+	font-size: 72px;
+	letter-spacing: -0.02em;
+	line-height: 110%;
+	color: #FFFFFF;
+	font-family: 'Fixel';
+	font-weight: 600;
+}
+
+/* Let the explicit <br> control the two-line layout on wide screens;
+	 collapse it so the headline wraps naturally on narrow screens. */
+
+.hero__lead {
+	margin-top: 32px;
+	color: #FFFFFF99;
+	line-height: 1.5;
+	max-width: 523px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 130%;
+	letter-spacing: -2%;
+	text-align: center;
+}
+
+.hero__links {
+	margin-top: 42px;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.hero__link {
+	border-radius: 11px;
+	padding: 18.5px 42px;
+	background-color: #ffffff;
+
+	font-family: "Fixel";
+	font-weight: 500;
+	font-style: Medium;
+	font-size: 16px;
+	line-height: 120%;
+	letter-spacing: 0%;
+	text-align: center;
+	color: #2A69CE;
+	text-decoration: none;
+}
+
+.hero__link--second {
+	color: #FFFFFF;
+	background-color: #5587D8;
+}
+
+@media (max-width: 1024px) {
+	.hero__dec {
+		display: none;
+	}
+
+	.hero__title {
+		font-size: 32px;
+	}
+
+	.hero__lead {
+		font-size: 14px;
+	}
+
+	.hero__links {
+		flex-direction: column;
+	}
+}

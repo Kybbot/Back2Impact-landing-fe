@@ -1,0 +1,25 @@
+---
+import { getDictionary } from "../i18n";
+
+const t = getDictionary(Astro.currentLocale);
+---
+
+<section class="hero" id="top">
+	<div class="container hero__inner">
+		<div class="hero__dec hero__dec1"></div>
+		<div class="hero__dec hero__dec2"></div>
+		<div class="hero__dec hero__dec3"></div>
+		<div class="hero__dec hero__dec4"></div>
+
+		<span class="pill">{t.hero.pill}</span>
+
+		<h1 class="hero__title" set:html={t.hero.title} />
+
+		<p class="hero__lead">{t.hero.lead}</p>
+
+		<div class="hero__links">
+			<a href="#" target="_blank" rel="noopener noreferrer" class="hero__link">{t.actions.join}</a>
+			<a href="#" target="_blank" rel="noopener noreferrer" class="hero__link hero__link--second">{t.actions.findTalent}</a>
+		</div>
+	</div>
+</section>

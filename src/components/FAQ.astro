@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import plusIcon from "../assets/images/plus-icon.svg";
+import { getDictionary } from "../i18n";
+
+const t = getDictionary(Astro.currentLocale);
+---
+
+<section class="faq" id="faq">
+	<div class="faq__container">
+		<h2 class="faq__title">{t.faq.title}</h2>
+		<div class="faq__lists-block">
+			{
+				t.faq.sections.map((section, sectionIndex) => (
+					<div class="faq__list-container">
+						<div class="faq__list-top-block">
+							<p class="faq__list-title">{section.title}</p>
+						</div>
+						<ul class="faq__list">
+							{section.items.map((item, i) => {
+								// First item open by default.
+								const isOpen = sectionIndex === 0 && i === 0;
+								return (
+									<li class:list={["faq__item", { "is-open": isOpen }]}>
+										<button class="faq__q" type="button" aria-expanded={String(isOpen)}>
+											<span>{item.q}</span>
+											<Image src={plusIcon} alt="" class="faq__chevron" />
+										</button>
+										<div class="faq__a" hidden={!isOpen}>
+											<p>{item.a}</p>
+										</div>
+									</li>
+								);
+							})}
+						</ul>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<script>
+	const items = document.querySelectorAll<HTMLElement>(".faq__item");
+
+	function setOpen(item: HTMLElement, isOpen: boolean) {
+		item.classList.toggle("is-open", isOpen);
+		item.querySelector(".faq__q")?.setAttribute("aria-expanded", String(isOpen));
+		const answer = item.querySelector<HTMLElement>(".faq__a");
+		if (answer) answer.hidden = !isOpen;
+	}
+
+	items.forEach((item) => {
+		item.querySelector(".faq__q")?.addEventListener("click", () => {
+			const isOpen = item.classList.contains("is-open");
+			items.forEach((other) => setOpen(other, false));
+			if (!isOpen) setOpen(item, true);
+		});
+	});
+</script>

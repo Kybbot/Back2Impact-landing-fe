@@ -1,0 +1,92 @@
+---
+import { getImage } from "astro:assets";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
+
+import "../assets/css/index.css";
+
+import ogPhoto from "../assets/images/group.png";
+
+import { defaultLang, getDictionary, getLang, languages, type Lang } from "../i18n";
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const lang = getLang(Astro.currentLocale);
+const t = getDictionary(lang);
+
+const { title = t.meta.title, description = t.meta.description } = Astro.props;
+
+const SITE_NAME = "Back2Impact Ukraine";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const otherLangs = (Object.keys(languages) as Lang[]).filter((locale) => locale !== lang);
+
+const ogImage = await getImage({ src: ogPhoto, width: 1200, height: 630, fit: "cover", format: "jpg" });
+const ogImageURL = new URL(ogImage.src, Astro.site);
+
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	name: SITE_NAME,
+	url: canonicalURL.href,
+	inLanguage: lang,
+	description,
+	publisher: {
+		"@type": "Organization",
+		name: "Ukraine Global Scholars",
+		email: "info@ugs.foundation",
+	},
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+
+		<title>{title}</title>
+
+		<meta name="description" content={description} />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" content="#2A69CE" />
+
+		<link rel="canonical" href={canonicalURL} />
+		<link rel="alternate" hreflang={lang} href={canonicalURL} />
+		{
+			otherLangs.map((locale) => (
+				<link rel="alternate" hreflang={locale} href={getAbsoluteLocaleUrl(locale)} />
+			))
+		}
+		<link rel="alternate" hreflang="x-default" href={getAbsoluteLocaleUrl(defaultLang)} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content={SITE_NAME} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:locale" content={t.meta.locale} />
+		{
+			otherLangs.map((locale) => (
+				<meta property="og:locale:alternate" content={getDictionary(locale).meta.locale} />
+			))
+		}
+		<meta property="og:image" content={ogImageURL} />
+		<meta property="og:image:width" content={String(ogImage.attributes.width)} />
+		<meta property="og:image:height" content={String(ogImage.attributes.height)} />
+		<meta property="og:image:alt" content={t.about.photoAlt} />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+	</head>
+	<body>
+		<div class="page">
+			<slot />
+		</div>
+	</body>
+</html>

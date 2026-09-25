@@ -1,0 +1,23 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getDictionary, getLang, languages, type Lang } from "../i18n";
+
+const currentLang = getLang(Astro.currentLocale);
+const t = getDictionary(currentLang);
+---
+
+<div class="navbar__langs" role="group" aria-label={t.nav.language}>
+	{
+		(Object.keys(languages) as Lang[]).map((lang) => (
+			<a
+				class:list={["navbar__lang", { "is-active": lang === currentLang }]}
+				href={getRelativeLocaleUrl(lang)}
+				hreflang={lang}
+				lang={lang}
+				aria-current={lang === currentLang ? "page" : undefined}
+			>
+				{languages[lang]}
+			</a>
+		))
+	}
+</div>

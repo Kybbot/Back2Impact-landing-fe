@@ -1,0 +1,91 @@
+---
+import { Image } from "astro:assets";
+import photo from "../assets/images/how-it-works-photo.jpg";
+import { getDictionary } from "../i18n";
+
+const t = getDictionary(Astro.currentLocale);
+---
+
+<section class="how" id="how-it-works">
+	<div class="how__container">
+		<div class="how__dec"></div>
+		<div class="how__title-block">
+			<span class="pill">{t.how.pill}</span>
+			<h2 class="how__title" set:html={t.how.title} />
+		</div>
+		<div class="how__content-container">
+			<div class="how__content">
+				<ol class="steps">
+					{
+						t.how.steps.map((step) => (
+							<li class="step">
+								<div class="how__num-container">
+									<span class="step__num">{step.num}</span>
+								</div>
+								<div class="step__body">
+									<h3 class="step__title">{step.title}</h3>
+									<p class="step__desc">{step.desc}</p>
+								</div>
+							</li>
+						))
+					}
+				</ol>
+			</div>
+
+			<figure class="how__media">
+				<div class="how__photo-container">
+					<Image
+						class="how__photo"
+						src={photo}
+						alt={t.how.photoAlt}
+						width={1080}
+						widths={[540, 1080]}
+						sizes="(max-width: 1000px) 100vw, 540px"
+					/>
+				</div>
+				<svg
+					width="118"
+					height="118"
+					viewBox="0 0 118 118"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="how__badge"
+				>
+					<rect
+						x="24.5969"
+						width="96"
+						height="96"
+						rx="48"
+						transform="rotate(14.8457 24.5969 0)"
+						fill="white"></rect>
+					<rect
+						x="24.5969"
+						width="96"
+						height="96"
+						rx="48"
+						transform="rotate(14.8457 24.5969 0)"
+						fill="#5587D8"></rect>
+					<g clip-path="url(#clip0_1320_139)">
+						<path
+							d="M50.322 33.2342C49.073 32.9031 47.7436 33.0818 46.6262 33.7309C45.5089 34.38 44.6952 35.4464 44.3641 36.6954L35.2097 71.232C34.8786 72.481 35.0572 73.8106 35.7063 74.9279C36.3554 76.0453 37.4218 76.8588 38.6709 77.1899L66.9281 84.6799C68.1771 85.011 69.5067 84.8325 70.624 84.1834C71.7413 83.5343 72.555 82.4677 72.886 81.2187L79.5438 56.1012C79.6542 55.6848 79.5946 55.2416 79.3784 54.8693L70.1484 38.9816C69.932 38.6091 69.5766 38.3379 69.1602 38.2275L50.322 33.2342Z"
+							fill="white"></path>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M58.8153 45.3202C58.3445 47.0965 56.5229 48.1547 54.7467 47.6839C52.9705 47.2131 51.9123 45.3915 52.3831 43.6153C52.8539 41.8391 54.6755 40.7809 56.4517 41.2517C58.2279 41.7225 59.2861 43.544 58.8153 45.3202ZM46.9101 58.7914C45.8264 58.5042 44.7162 59.1502 44.4306 60.2344C44.145 61.3185 44.792 62.4303 45.8757 62.7176L67.8535 68.5431C68.9373 68.8304 70.0474 68.1844 70.3331 67.1002C70.6188 66.0161 69.9716 64.9042 68.8881 64.617L46.9101 58.7914ZM44.4134 68.2106C43.3296 67.9234 42.2196 68.5693 41.9339 69.6536C41.6483 70.7375 42.2952 71.8495 43.379 72.1368L55.9378 75.4657C57.0215 75.753 58.1317 75.1067 58.4173 74.0228C58.703 72.9385 58.0559 71.8268 56.9722 71.5395L44.4134 68.2106ZM47.8784 50.4963C49.7561 49.5397 51.9793 49.2446 54.1766 49.8271C56.3738 50.4095 58.159 51.767 59.3164 53.528C60.0033 54.5733 58.9562 55.6834 57.7472 55.3629L48.3327 52.8675C47.1237 52.547 46.7639 51.064 47.8784 50.4963Z"
+							fill="#4A80FF"></path>
+					</g>
+					<defs>
+						<clipPath id="clip0_1320_139">
+							<rect
+								width="45.4737"
+								height="45.4737"
+								fill="white"
+								transform="translate(42.4719 31.1538) rotate(14.8457)"></rect>
+						</clipPath>
+					</defs>
+				</svg>
+			</figure>
+		</div>
+	</div>
+</section>
