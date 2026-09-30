@@ -1,5 +1,5 @@
 .footer {
-	background: #2A69CE;
+	background: #2a69ce;
 }
 
 .footer__container {
@@ -8,12 +8,16 @@
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
-	padding: 100px 50px 50px;
+	overflow: hidden;
+	padding: 100px 50px 198px 50px;
 }
 
 .footer__content-container {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
+	gap: 16px;
+
 	width: 100%;
 	max-width: 840px;
 	position: relative;
@@ -27,37 +31,37 @@
 }
 
 .footer__dec1 {
-	left: -290px;
-	bottom: -150px;
-	background-color: #0751C7;
+	left: -100px;
+	bottom: -320px;
+	background-color: #0751c7;
 	transform: rotate(-133.65deg);
 }
 
 .footer__dec2 {
-	right: -280px;
-	bottom: -150px;
-	background-color: #0751C7;
+	right: -80px;
+	bottom: -340px;
+	background-color: #0751c7;
 	transform: rotate(-133.65deg);
 }
 
 .footer__dec3 {
-	right: -275px;
-	bottom: -240px;
-	background-color: #FFD76F;
+	right: -80px;
+	bottom: -450px;
+	background-color: #ffd76f;
 	transform: rotate(-46.35deg);
 }
 
 .footer__title {
 	position: relative;
 	font-weight: 600;
-	font-size: 56px;
+	font-size: 36px;
 	line-height: 110%;
 	letter-spacing: -3%;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 .footer__email {
-	color: #FFFFFF;
+	color: #ffffff;
 	font-weight: 600;
 	font-size: 24px;
 	line-height: 130%;
@@ -72,14 +76,13 @@
 .footer__text {
 	width: 100%;
 	max-width: 840px;
-	margin: 42px auto 150px auto;
+	margin: 42px auto 95px auto;
 
 	font-weight: 500;
-	font-style: Medium;
 	font-size: 24px;
 	line-height: 130%;
 	letter-spacing: -3%;
-	color: #FFFFFF99;
+	color: #ffffff99;
 }
 
 .footer__subText {
@@ -88,21 +91,42 @@
 	margin: 0 auto;
 
 	font-weight: 500;
-	font-style: Medium;
 	font-size: 18px;
 	line-height: 130%;
 	text-align: center;
 	letter-spacing: -3%;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
-@media (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
 	.footer__container {
-		padding: 100.2px 52px 207.8px;
+		padding: 100px 50px 50px 50px;
 	}
 
 	.footer__content-container {
-		flex-direction: column;
-		gap: 16px;
+		flex-direction: row;
+	}
+
+	.footer__title {
+		font-size: 56px;
+	}
+
+	.footer__text {
+		margin: 42px auto 150px auto;
+	}
+
+	.footer__dec1 {
+		left: -290px;
+		bottom: -150px;
+	}
+
+	.footer__dec2 {
+		right: -280px;
+		bottom: -150px;
+	}
+
+	.footer__dec3 {
+		right: -275px;
+		bottom: -240px;
 	}
 }

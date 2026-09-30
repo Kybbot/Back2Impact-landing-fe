@@ -1,7 +1,7 @@
 .navbar {
 	display: flex;
 	justify-content: center;
-	background: #2A69CE;
+	background: #2a69ce;
 	padding-top: 42px;
 }
 
@@ -14,7 +14,7 @@
 	height: 74px;
 	max-width: 1000px;
 	position: relative;
-	background: #FFFFFF33;
+	background: #ffffff;
 	border-radius: 22px;
 	padding: 16px 24px;
 	box-shadow: 0 12px 30px rgba(30, 30, 45, 0.05);
@@ -27,13 +27,13 @@
 }
 
 .navbar__link {
-	color: #FFFFFF;
+	color: #22282b;
 	text-decoration: none;
-	font-size: 17px;
+	font-size: 14px;
 	font-weight: 500;
+	line-height: 120%;
 	transition: color 0.15s ease;
 }
-
 
 .navbar__mobile-menu {
 	display: none;
@@ -52,7 +52,6 @@
 .navbar__mobile-menu[hidden] {
 	display: none;
 }
-
 
 @keyframes menuAppear {
 	from {
@@ -77,14 +76,26 @@
 }
 
 .navbar__logo {
-	width: 200px;
-	justify-self: center;
-	color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.navbar__desktopIcon {
+	display: none;
+}
+
+.navbar__pin {
+	border-radius: 100px;
+	padding: 3px 8px 5px 8px;
+	background-color: #5587d826;
+
+	font-family: "Fixel";
 	font-weight: 600;
-	font-size: 22px;
-	letter-spacing: 0.04em;
-	text-align: left;
-	text-decoration: none;
+	font-size: 10px;
+	line-height: 120%;
+	letter-spacing: 0%;
+	color: #2a69ce;
 }
 
 .navbar__join-container {
@@ -101,7 +112,7 @@
 }
 
 .navbar__lang {
-	color: #FFFFFF99;
+	color: #22282b99;
 	text-decoration: none;
 	font-size: 16px;
 	font-weight: 600;
@@ -110,7 +121,7 @@
 
 .navbar__lang:hover,
 .navbar__lang.is-active {
-	color: #FFFFFF;
+	color: #22282b;
 }
 
 .navbar__mobile-menu .navbar__langs {
@@ -132,7 +143,7 @@
 	align-items: center;
 	height: 42px;
 	white-space: nowrap;
-	background: #4286F5;
+	background: #4286f5;
 	color: #ffffff;
 	text-decoration: none;
 	font-size: 16px;
@@ -152,7 +163,7 @@
 	align-items: center;
 	width: 34px;
 	height: 34px;
-	background-color: #FAFAFA;
+	background-color: #fafafa;
 	border: none;
 	border-radius: 8px;
 }
@@ -160,10 +171,6 @@
 @media (max-width: 1024px) {
 	.navbar {
 		padding: 42px 32px 0;
-	}
-
-	.navbar__logo {
-		font-size: 16px;
 	}
 
 	.navbar__links,
@@ -177,5 +184,19 @@
 
 	.navbar__mobile-menu-btn {
 		display: flex;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.navbar__mobileIcon {
+		display: none;
+	}
+
+	.navbar__desktopIcon {
+		display: block;
+	}
+
+	.navbar__pin {
+		font-size: 12px;
 	}
 }

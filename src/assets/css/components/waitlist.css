@@ -11,8 +11,8 @@
 }
 
 .waitlist__title {
-	font-weight: 600;
-	font-size: 48px;
+	font-weight: 700;
+	font-size: 56px;
 	line-height: 110%;
 	letter-spacing: -3%;
 	text-align: center;
@@ -31,6 +31,7 @@
 }
 
 .waitlist__links {
+	width: initial;
 	margin-top: 56px;
 	display: flex;
 	align-items: center;
@@ -38,6 +39,7 @@
 }
 
 .waitlist__link {
+	width: initial;
 	border-radius: 11px;
 	padding: 18.5px 42px;
 	background-color: #4d87e4;
@@ -60,11 +62,11 @@
 
 @media (max-width: 1024px) {
 	.waitlist {
-		padding: 96px 32px;
+		padding: 120px 32px;
 	}
 
 	.waitlist__title {
-		font-size: 32px;
+		font-size: 36px;
 	}
 
 	.waitlist__lead {
@@ -76,6 +78,11 @@
 	}
 
 	.waitlist__links {
+		width: 100%;
 		flex-direction: column;
+	}
+
+	.waitlist__link {
+		width: 100%;
 	}
 }

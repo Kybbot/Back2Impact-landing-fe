@@ -1,18 +1,18 @@
 :root {
 	/* Brand palette (sampled from design) */
 	--color-bg: #ffffff;
-	--color-ink: #22282B; /* headings / strong text */
+	--color-ink: #22282b; /* headings / strong text */
 	--color-body: #5b6577; /* body / paragraph text */
 	--color-muted: #8a93a6; /* secondary text, stat labels */
 	--color-card: #f6f7f9; /* soft card background */
 	--color-card-border: #ececf1;
-	--color-page: #4286F514; /* light lavender page/hero background */
+	--color-page: #4286f514; /* light lavender page/hero background */
 	--color-accent-blue: #3b6df6; /* stat lines, primary button */
 	--color-accent-yellow: #f7cf5a; /* pills */
 	--color-input-border: #e6e8ef;
 
 	/* Typography */
-	--font-sans: 'Fixel', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+	--font-sans: "Fixel", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
 	/* Radii */
 	--radius-sm: 16px;
@@ -75,7 +75,7 @@ p {
 	width: 100%;
 	max-width: var(--container);
 	margin-inline: auto;
-	padding-inline: clamp(20px, 4vw, 64px);
+	padding-inline: clamp(32px, 4vw, 64px);
 }
 
 /* Shared yellow badge/pill */
