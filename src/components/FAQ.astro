@@ -8,11 +8,11 @@ const t = getDictionary(Astro.currentLocale);
 
 <section class="faq" id="faq">
 	<div class="faq__container">
-		<h2 class="faq__title">{t.faq.title}</h2>
+		<h2 class="faq__title reveal" data-revealed="false">{t.faq.title}</h2>
 		<div class="faq__lists-block">
 			{
 				t.faq.sections.map((section, sectionIndex) => (
-					<div class="faq__list-container">
+					<div class="faq__list-container reveal" data-revealed="false">
 						<div class="faq__list-top-block">
 							<p class="faq__list-title">{section.title}</p>
 						</div>
@@ -22,7 +22,7 @@ const t = getDictionary(Astro.currentLocale);
 								const isOpen = sectionIndex === 0 && i === 0;
 								return (
 									<li class:list={["faq__item", { "is-open": isOpen }]}>
-										<button class="faq__q" type="button" aria-expanded={String(isOpen)}>
+										<button class="faq__q" type="button" aria-expanded={isOpen}>
 											<span>{item.q}</span>
 											<Image src={plusIcon} alt="" class="faq__chevron" />
 										</button>

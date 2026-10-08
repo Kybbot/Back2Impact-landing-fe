@@ -8,8 +8,8 @@ const t = getDictionary(Astro.currentLocale);
 
 <section class="how" id="how-it-works">
 	<div class="how__container">
-		<div class="how__dec"></div>
-		<div class="how__title-block">
+		<div class="how__dec reveal-fade" data-revealed="false"></div>
+		<div class="how__title-block reveal-group" data-revealed="false">
 			<span class="pill">{t.how.pill}</span>
 			<h2 class="how__title" set:html={t.how.title} />
 		</div>
@@ -18,7 +18,7 @@ const t = getDictionary(Astro.currentLocale);
 				<ol class="steps">
 					{
 						t.how.steps.map((step) => (
-							<li class="step">
+							<li class="step reveal" data-revealed="false">
 								<div class="how__num-container">
 									<span class="step__num">{step.num}</span>
 								</div>
@@ -32,7 +32,7 @@ const t = getDictionary(Astro.currentLocale);
 				</ol>
 			</div>
 
-			<figure class="how__media">
+			<figure class="how__media reveal-zoom" data-revealed="false">
 				<div class="how__photo-container">
 					<Image
 						class="how__photo"

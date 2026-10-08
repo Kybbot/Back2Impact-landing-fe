@@ -1,0 +1,163 @@
+:root {
+	--reveal-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		translate: 0 24px;
+	}
+}
+
+@keyframes fadeDown {
+	from {
+		opacity: 0;
+		translate: 0 -12px;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+}
+
+@keyframes zoomIn {
+	from {
+		opacity: 0;
+		scale: 0.96;
+	}
+}
+
+@keyframes popIn {
+	from {
+		opacity: 0;
+		scale: 0.6;
+	}
+}
+
+/* `translate`/`scale` rather than `transform`, so the rotated decorations keep
+their angle, and `animation` rather than `transition`, so hover transitions stay.
+`backwards` fill: nothing is held once an animation ends */
+@media (prefers-reduced-motion: no-preference) {
+	/* on load: plain CSS, so it plays as soon as the HTML is painted.
+	The navbar bar stays put, its contents slide in */
+	.navbar__pin,
+	.navbar__links,
+	.navbar__join-container,
+	.navbar__mobile-menu-btn {
+		animation: fadeDown 600ms var(--reveal-ease) backwards;
+	}
+
+	.navbar__links,
+	.navbar__mobile-menu-btn {
+		animation-delay: 80ms;
+	}
+
+	.navbar__join-container {
+		animation-delay: 160ms;
+	}
+
+	.hero .pill,
+	.hero__title,
+	.hero__lead,
+	.hero__link {
+		animation: fadeUp 700ms var(--reveal-ease) backwards;
+	}
+
+	/* short delays — the heading is the LCP candidate */
+	.hero__title {
+		animation-delay: 80ms;
+	}
+
+	.hero__lead {
+		animation-delay: 160ms;
+	}
+
+	.hero__link {
+		animation-delay: 240ms;
+	}
+
+	.hero__link--second {
+		animation-delay: 320ms;
+	}
+
+	.hero__dec {
+		animation: fadeIn 900ms ease 300ms backwards;
+	}
+
+	.hero__dec2 {
+		animation-delay: 450ms;
+	}
+
+	.hero__dec3 {
+		animation-delay: 600ms;
+	}
+
+	.hero__dec4 {
+		animation-delay: 750ms;
+	}
+
+	/* on scroll: the script in pages/index.astro flips `data-revealed` once the block is in view */
+	[data-revealed="false"]:is(.reveal, .reveal-fade, .reveal-zoom),
+	.reveal-group[data-revealed="false"] > * {
+		opacity: 0;
+	}
+
+	.reveal[data-revealed="true"],
+	.reveal-group[data-revealed="true"] > * {
+		animation: fadeUp 700ms var(--reveal-ease) var(--reveal-delay, 0ms) backwards;
+	}
+
+	.reveal-fade[data-revealed="true"] {
+		animation: fadeIn 900ms ease var(--reveal-delay, 0ms) backwards;
+	}
+
+	.reveal-zoom[data-revealed="true"] {
+		animation: zoomIn 800ms var(--reveal-ease) var(--reveal-delay, 0ms) backwards;
+	}
+
+	.reveal-group > :nth-child(2),
+	.step:nth-child(2),
+	.stat:nth-child(2) {
+		--reveal-delay: 100ms;
+	}
+
+	.reveal-group > :nth-child(3),
+	.step:nth-child(3),
+	.stat:nth-child(3) {
+		--reveal-delay: 200ms;
+	}
+
+	.reveal-group > :nth-child(4),
+	.stat:nth-child(4) {
+		--reveal-delay: 300ms;
+	}
+
+	.how__media[data-revealed="true"] .how__badge {
+		animation: popIn 600ms var(--reveal-ease) 450ms backwards;
+	}
+
+	/* the plates ride in with the footer group, then fade in one by one like the hero ones.
+	Not observed on their own: `overflow: hidden` clips most of them */
+	.footer__container[data-revealed="true"] .footer__dec {
+		animation: fadeIn 900ms ease 300ms backwards;
+	}
+
+	.footer__container[data-revealed="true"] .footer__dec2 {
+		animation-delay: 450ms;
+	}
+
+	.footer__container[data-revealed="true"] .footer__dec3 {
+		animation-delay: 600ms;
+	}
+}
+
+/* without JS nothing would ever reveal them. The extra `.page` outweighs the
+rule above, since postcss-sort-media-queries may reorder the two blocks */
+@media (scripting: none) {
+	.page [data-revealed="false"]:is(.reveal, .reveal-fade, .reveal-zoom),
+	.page .reveal-group[data-revealed="false"] > * {
+		opacity: 1;
+	}
+}

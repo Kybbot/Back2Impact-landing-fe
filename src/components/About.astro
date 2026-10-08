@@ -8,11 +8,11 @@ const t = getDictionary(Astro.currentLocale);
 
 <section class="about" id="about">
 	<div class="about__container">
-		<div class="about__dec about__dec1"></div>
-		<div class="about__dec about__dec2"></div>
-		<div class="about__dec about__dec3"></div>
+		<div class="about__dec about__dec1 reveal-fade" data-revealed="false"></div>
+		<div class="about__dec about__dec2 reveal-fade" data-revealed="false"></div>
+		<div class="about__dec about__dec3 reveal-fade" data-revealed="false"></div>
 
-		<div class="about__head">
+		<div class="about__head reveal-group" data-revealed="false">
 			<span class="pill">{t.about.pill}</span>
 			<h2 class="about__title" set:html={t.about.title} />
 			<p class="about__lead">{t.about.lead}</p>
@@ -21,7 +21,7 @@ const t = getDictionary(Astro.currentLocale);
 		<ul class="stats">
 			{
 				t.about.stats.map((stat) => (
-					<li class="stat">
+					<li class="stat reveal" data-revealed="false">
 						<span class="stat__rule" />
 						<span class="stat__value">{stat.value}</span>
 						<span class="stat__label">{stat.label}</span>
@@ -30,7 +30,7 @@ const t = getDictionary(Astro.currentLocale);
 			}
 		</ul>
 
-		<figure class="about__photo">
+		<figure class="about__photo reveal-zoom" data-revealed="false">
 			<Image
 				src={groupPhoto}
 				alt={t.about.photoAlt}

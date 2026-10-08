@@ -20,3 +20,19 @@ import Footer from "../components/Footer.astro";
 	</main>
 	<Footer />
 </Layout>
+
+<script>
+	// Flips `data-revealed` once a block scrolls into view; the entrance itself is in animations.css.
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (!entry.isIntersecting) return;
+				(entry.target as HTMLElement).dataset.revealed = "true";
+				observer.unobserve(entry.target);
+			});
+		},
+		{ threshold: 0.45 },
+	);
+
+	document.querySelectorAll('[data-revealed="false"]').forEach((target) => observer.observe(target));
+</script>

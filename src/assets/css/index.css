@@ -1,5 +1,6 @@
 @import "./fonts.css";
 @import "./base.css";
+@import "./animations.css";
 @import "./components/navbar.css";
 @import "./components/hero.css";
 @import "./components/how-it-works.css";
