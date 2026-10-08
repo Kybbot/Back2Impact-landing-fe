@@ -101,6 +101,14 @@
 	text-align: center;
 	color: #2a69ce;
 	text-decoration: none;
+	transition:
+		margin ease 0.3s,
+		padding ease 0.3s;
+}
+
+.hero__link:hover {
+	margin: -2px -2.5px;
+	padding: 20.5px 44.5px;
 }
 
 .hero__link--second {
