@@ -1,3 +1,5 @@
+import { EMAIL } from "../utils/constants";
+
 export const uk = {
 	meta: {
 		title: "Back2Impact Ukraine — твій досвід має значення в Україні",
@@ -115,7 +117,7 @@ export const uk = {
 				items: [
 					{
 						q: "Що робити, якщо не виходить заповнити анкету?",
-						a: "Напишіть нам на пошту [placeholder] — ми допоможемо.",
+						a: `Напишіть нам на пошту ${EMAIL} — ми допоможемо.`,
 					},
 				],
 			},

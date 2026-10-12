@@ -1,5 +1,7 @@
 import type { Dictionary } from "./uk";
 
+import { EMAIL } from "../utils/constants";
+
 export const en: Dictionary = {
 	meta: {
 		title: "Back2Impact Ukraine — your experience matters in Ukraine",
@@ -117,7 +119,7 @@ export const en: Dictionary = {
 				items: [
 					{
 						q: "What if I have trouble filling in the form?",
-						a: "Email us at [placeholder] and we'll help.",
+						a: `Email us at ${EMAIL} and we'll help.`,
 					},
 				],
 			},

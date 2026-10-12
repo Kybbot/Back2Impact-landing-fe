@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import mobileMenuIcon from "../assets/images/mobile-menu-icon.svg";
 import { getDictionary } from "../i18n";
 import LanguageSwitcher from "./LanguageSwitcher.astro";
+import { LINKS } from "../utils/constants";
 
 const t = getDictionary(Astro.currentLocale);
 ---
@@ -160,7 +161,7 @@ const t = getDictionary(Astro.currentLocale);
 		</nav>
 
 		<div class="navbar__join-container">
-			<a href="#" target="_blank" rel="noopener noreferrer" class="navbar__help">{t.nav.help}</a>
+			<a href={LINKS.donate} target="_blank" rel="noopener noreferrer" class="navbar__help">{t.nav.help}</a>
 			<LanguageSwitcher />
 		</div>
 
@@ -176,7 +177,7 @@ const t = getDictionary(Astro.currentLocale);
 					</a>
 				))
 			}
-			<a class="navbar__link" href="#" target="_blank" rel="noopener noreferrer">{t.nav.help}</a>
+			<a class="navbar__link" href={LINKS.donate} target="_blank" rel="noopener noreferrer">{t.nav.help}</a>
 			<LanguageSwitcher />
 		</nav>
 	</div>

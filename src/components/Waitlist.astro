@@ -1,5 +1,6 @@
 ---
 import { getDictionary } from "../i18n";
+import { LINKS } from "../utils/constants";
 
 const t = getDictionary(Astro.currentLocale);
 ---
@@ -11,9 +12,14 @@ const t = getDictionary(Astro.currentLocale);
 		<p class="waitlist__lead">{t.waitlist.lead}</p>
 
 		<div class="waitlist__links">
-			<a href="#" target="_blank" rel="noopener noreferrer" class="waitlist__link">{t.actions.join}</a>
-			<a href="#" target="_blank" rel="noopener noreferrer" class="waitlist__link waitlist__link--second"
-				>{t.actions.forEmployers}</a
+			<a href={LINKS.candidate} target="_blank" rel="noopener noreferrer" class="waitlist__link">
+				{t.actions.join}
+			</a>
+			<a
+				target="_blank"
+				href={LINKS.employer}
+				rel="noopener noreferrer"
+				class="waitlist__link waitlist__link--second">{t.actions.forEmployers}</a
 			>
 		</div>
 	</div>

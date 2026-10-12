@@ -39,7 +39,7 @@
 	width: 100%;
 	border-radius: 100px;
 	padding: 16px 32px;
-	background-color: #4286F514;
+	background-color: #4286f514;
 }
 
 .faq__list-title {
@@ -48,7 +48,7 @@
 	line-height: 140%;
 	letter-spacing: -1%;
 	text-align: left;
-	color: #22282B;
+	color: #22282b;
 }
 
 .faq__list {
@@ -106,7 +106,7 @@
 }
 
 .faq__a::before {
-	content: '';
+	content: "";
 	display: block;
 	height: 1px;
 	background: #ececf1;
@@ -121,6 +121,8 @@
 	line-height: 140%;
 	letter-spacing: -1%;
 	max-width: 78ch;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 @media (max-width: 1024px) {

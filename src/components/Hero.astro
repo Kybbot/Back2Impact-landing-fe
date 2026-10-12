@@ -1,5 +1,6 @@
 ---
 import { getDictionary } from "../i18n";
+import { LINKS } from "../utils/constants";
 
 const t = getDictionary(Astro.currentLocale);
 ---
@@ -18,7 +19,9 @@ const t = getDictionary(Astro.currentLocale);
 		<p class="hero__lead">{t.hero.lead}</p>
 
 		<div class="hero__links">
-			<a href="#" target="_blank" rel="noopener noreferrer" class="hero__link">{t.actions.join}</a>
+			<a href={LINKS.candidate} target="_blank" rel="noopener noreferrer" class="hero__link">
+				{t.actions.join}
+			</a>
 		</div>
 	</div>
 </section>

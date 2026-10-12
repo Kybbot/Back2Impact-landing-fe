@@ -76,6 +76,8 @@
 	text-decoration-thickness: 0%;
 	text-decoration: underline;
 	text-underline-offset: 4px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 .footer__text {

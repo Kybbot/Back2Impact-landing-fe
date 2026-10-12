@@ -1,6 +1,8 @@
 ---
 import { getDictionary } from "../i18n";
 
+import { EMAIL, LINKS } from "../utils/constants";
+
 const t = getDictionary(Astro.currentLocale);
 ---
 
@@ -114,10 +116,10 @@ const t = getDictionary(Astro.currentLocale);
 		<div class="footer__content-container">
 			<h2 class="footer__title" set:html={t.footer.title} />
 
-			<a class="footer__email" href="mailto:[placeholder]">[placeholder]</a>
+			<a class="footer__email" href={`mailto:${EMAIL}`}>{EMAIL}</a>
 		</div>
 		<p class="footer__text">{t.footer.text}</p>
-		<a href="#" target="_blank" rel="noopener noreferrer" class="footer__link">{t.footer.link}</a>
+		<a href={LINKS.donate} target="_blank" rel="noopener noreferrer" class="footer__link">{t.footer.link}</a>
 		<p class="footer__subText">© 2026 Ukraine Global Scholars</p>
 	</div>
 </footer>
