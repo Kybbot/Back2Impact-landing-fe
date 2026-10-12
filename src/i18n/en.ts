@@ -57,7 +57,7 @@ export const en: Dictionary = {
 		lead: "Back2Impact Ukraine is a project of Ukraine Global Scholars, a charity that for more than 10 years has helped talented young Ukrainians from low-income families study at the world’s leading universities.",
 		photoAlt: "Ukraine Global Scholars community gathered in the Carpathian mountains",
 		stats: [
-			{ value: "513+", label: "513+ successful admissions to leading schools and universities worldwide" },
+			{ value: "513+", label: "successful admissions to leading schools and universities worldwide" },
 			{ value: "$108M+", label: "in scholarships secured" },
 			{ value: "5,700+", label: "applications to UGS" },
 		],
