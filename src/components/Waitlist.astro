@@ -6,13 +6,14 @@ const t = getDictionary(Astro.currentLocale);
 
 <section class="waitlist" id="waitlist">
 	<div class="container waitlist__inner reveal-group" data-revealed="false">
-		<h2 class="waitlist__title">{t.waitlist.title}</h2>
+		<span class="pill">{t.about.pill}</span>
+		<h2 class="waitlist__title" set:html={t.waitlist.title} />
 		<p class="waitlist__lead">{t.waitlist.lead}</p>
 
 		<div class="waitlist__links">
 			<a href="#" target="_blank" rel="noopener noreferrer" class="waitlist__link">{t.actions.join}</a>
 			<a href="#" target="_blank" rel="noopener noreferrer" class="waitlist__link waitlist__link--second"
-				>{t.actions.findTalent}</a
+				>{t.actions.forEmployers}</a
 			>
 		</div>
 	</div>

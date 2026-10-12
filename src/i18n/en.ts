@@ -12,65 +12,65 @@ export const en: Dictionary = {
 		primary: "Primary",
 		mobile: "Mobile",
 		menu: "Menu",
+		help: "Support UGS",
 		language: "Language",
 		links: [
 			{ label: "How it works", href: "#how-it-works" },
-			{ label: "About us", href: "#about" },
+			{ label: "About UGS", href: "#about" },
 			{ label: "FAQ", href: "#faq" },
 		],
 	},
 	actions: {
 		join: "Join",
-		findTalent: "Find talent",
+		forEmployers: "For employers",
 	},
 	hero: {
-		pill: "Come. Make an impact here",
-		title: "Your experience matters<br />in Ukraine",
-		lead: "Back2Impact Ukraine is a platform that helps you find where your experience will be most valuable—in jobs, internships, and projects that are shaping the country’s future. Leave your contact information and be among the first to learn about the launch of Back2Impact Ukraine and new opportunities in Ukraine.",
+		pill: "Your path to Ukraine starts here",
+		title: "Ukraine needs <br /> your experience",
+		lead: "Back2Impact Ukraine is a free platform that matches you with jobs, internships and projects in Ukraine based on your experience and goals. Leave your contacts and be the first to hear about the launch and opportunities.",
 	},
 	how: {
 		pill: "How it works",
-		title: "(Re)build your connection with Ukraine <br /> in 3 steps",
+		title: "Find your opportunity <br /> in 3 steps",
 		photoAlt: "Happy people exploring opportunities on their laptops",
 		steps: [
 			{
 				num: "01",
-				title: "Tell us about yourself",
-				desc: "Share your experience, skills and what you are looking for. This helps us understand which opportunities in Ukraine could be right for you.",
+				title: "Be among the first",
+				desc: "Leave your details now and be among the first to hear about new opportunities and get access to the next steps.",
 			},
 			{
 				num: "02",
-				title: "Discover where your experience can take you",
-				desc: "Find jobs, internships and projects where your knowledge and experience will be valued — and where you can grow, develop and make your contribution.",
+				title: "Tell us about yourself",
+				desc: "Once the platform launches, take a quick quiz so we can understand which opportunities in Ukraine fit you best.",
 			},
 			{
 				num: "03",
-				title: "Be among the first",
-				desc: "Join the Back2Impact Ukraine community to be among the first to hear about new opportunities, partnerships and ways to get involved with Ukraine.",
+				title: "Find your perfect match",
+				desc: "A job, an internship or a project — choose where you can grow and make a difference.",
 			},
 		],
 	},
 	about: {
-		pill: "About us",
-		title: "10 years of investing <br /> in people who build Ukraine",
-		lead: "Ukraine Global Scholars helps talented young Ukrainians study at the world’s leading universities and turn their global experience into a contribution to Ukraine’s future.",
+		pill: "About Ukraine Global Scholars",
+		title: "Investing in people who <br /> build Ukraine",
+		lead: "Back2Impact Ukraine is a project of Ukraine Global Scholars, a charity that for more than 10 years has helped talented young Ukrainians from low-income families study at the world’s leading universities.",
 		photoAlt: "Ukraine Global Scholars community gathered in the Carpathian mountains",
 		stats: [
-			{ value: "350+", label: "scholars supported" },
-			{ value: "$94M+", label: "in scholarships secured" },
-			{ value: "5,400", label: "applications received" },
-			{ value: "20", label: "students returned to Ukraine" },
+			{ value: "513+", label: "513+ successful admissions to leading schools and universities worldwide" },
+			{ value: "$108M+", label: "in scholarships secured" },
+			{ value: "5,700+", label: "applications to UGS" },
 		],
 	},
 	faq: {
 		title: "FAQ",
 		sections: [
 			{
-				title: "👋 Getting Started",
+				title: "👋 About the platform",
 				items: [
 					{
-						q: "What is Back to Impact Ukraine?",
-						a: "A platform that helps Ukrainians return home and find meaningful work, and supports international professionals considering contributing to Ukraine's recovery.",
+						q: "What is Back2Impact Ukraine?",
+						a: "A platform that matches Ukrainians who are returning or considering a return, as well as international professionals who want to work in Ukraine, with jobs, internships and projects in Ukraine.",
 					},
 					{
 						q: "Who can use the platform?",
@@ -86,11 +86,7 @@ export const en: Dictionary = {
 					},
 					{
 						q: "What do I need to get started?",
-						a: "Upload your up-to-date CV and complete a short profile outlining your interests and career preferences. The platform will personalize your job feed, match you with relevant opportunities, and provide all the information and resources you need to support your return to Ukraine.",
-					},
-					{
-						q: "How long does the onboarding take?",
-						a: "The CV upload takes a few minutes. The interest discovery chatbot takes 10-15 minutes and can be completed in multiple sessions at your own pace.",
+						a: "For now, just fill in a short form. We'll share the next steps early next year.",
 					},
 				],
 			},
@@ -99,32 +95,11 @@ export const en: Dictionary = {
 				items: [
 					{
 						q: "I'm not Ukrainian. Can I still use the platform?",
-						a: "Yes. The platform is open to anyone exploring Ukraine. If you want job matching, you can register and go through the same onboarding as Ukrainians.",
+						a: "Yes. The platform is open to anyone interested in professional opportunities in Ukraine. Matching works the same way for every candidate, regardless of citizenship.",
 					},
 					{
 						q: "What kind of roles are available for international professionals?",
-						a: "Roles in priority recovery sectors: technology, public administration, finance, infrastructure, and social impact. Listings intended for international candidates include English-language descriptions and information on work permit requirements.",
-					},
-				],
-			},
-			{
-				title: "🏠 Returning to Ukraine",
-				items: [
-					{
-						q: "I haven't been to Ukraine in years. Where do I start?",
-						a: "With this exact platform:) It covers security, housing, banking, healthcare, transport, digital services, and more.",
-					},
-					{
-						q: "Is it safe to come to Ukraine right now?",
-						a: "The platform provides up-to-date safety information and links to official resources, including shelter locations and regional security updates. For first-time entrants to Ukraine under martial law, the platform also provides mandatory security training information. We recommend reviewing official sources before finalizing your coming date.",
-					},
-					{
-						q: "Will someone help me with the practicalities of moving back?",
-						a: "Yes. Seven days before your confirmed return date, the platform automatically sends you a personalized arrival checklist covering logistics, banking setup, connectivity, and first-week steps. Your UGS coordinator is available for anything that goes beyond the checklist.",
-					},
-					{
-						q: "I don't speak Ukrainian. Is there support for that?",
-						a: "The platform includes links to Ukrainian-language learning resources and tracks your progress as part of a return-readiness score.",
+						a: "All listings include an English description and information on work permit requirements. To see roles open to international candidates, use the 'Open to international candidates' filter.",
 					},
 				],
 			},
@@ -133,7 +108,7 @@ export const en: Dictionary = {
 				items: [
 					{
 						q: "What happens to my CV and personal data?",
-						a: "Your data is used solely to generate your interest profile and job matches. Employers do not receive your personal details without your explicit consent. The platform is GDPR-compliant.",
+						a: "Your data is used solely to generate your interest profile and job matches. Employers do not receive your personal details without your consent.",
 					},
 				],
 			},
@@ -141,19 +116,21 @@ export const en: Dictionary = {
 				title: "💬 Support & Help",
 				items: [
 					{
-						q: "What if I have a question that the chatbot can't answer?",
-						a: "The platform flags unanswered questions to the UGS team, who respond and add the answer to the knowledge base. You can also reach a UGS coordinator directly through the platform at any point.",
+						q: "What if I have trouble filling in the form?",
+						a: "Email us at [placeholder] and we'll help.",
 					},
 				],
 			},
 		],
 	},
 	waitlist: {
-		title: "Ready to take the first step?",
-		lead: "No matter where your career takes you, it may lead you to Ukraine. Be among the first to join.",
+		pill: "For Employers",
+		title: "Looking for talent <br /> for your organisation?",
+		lead: "Leave your contacts to be the first to know when the platform launches and you can connect with professionals with international experience who are ready to work in Ukraine.",
 	},
 	footer: {
 		title: "Have questions? <br /> Write to us",
-		text: "Back2Impact Ukraine is an initiative of Ukraine Global Scholars.",
+		text: "Back2Impact Ukraine is a project of Ukraine Global Scholars.",
+		link: "Support UGS",
 	},
 };

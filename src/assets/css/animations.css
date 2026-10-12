@@ -42,7 +42,6 @@ their angle, and `animation` rather than `transition`, so hover transitions stay
 @media (prefers-reduced-motion: no-preference) {
 	/* on load: plain CSS, so it plays as soon as the HTML is painted.
 	The navbar bar stays put, its contents slide in */
-	.navbar__pin,
 	.navbar__links,
 	.navbar__join-container,
 	.navbar__mobile-menu-btn {

@@ -1,15 +1,20 @@
 .footer {
+	position: relative;
 	background: #2a69ce;
 }
 
 .footer__container {
 	display: flex;
-	align-items: center;
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
-	overflow: hidden;
-	padding: 100px 50px 198px 50px;
+	margin: 0 auto;
+	max-width: 840px;
+	padding: 100px 50px 56px 50px;
+}
+
+.footer__icon {
+	margin-bottom: 32px;
 }
 
 .footer__content-container {
@@ -31,22 +36,22 @@
 }
 
 .footer__dec1 {
-	left: -100px;
-	bottom: -320px;
+	top: 48%;
+	left: -50px;
 	background-color: #0751c7;
 	transform: rotate(-133.65deg);
 }
 
 .footer__dec2 {
-	right: -80px;
-	bottom: -340px;
+	top: 60%;
+	right: -10px;
 	background-color: #0751c7;
 	transform: rotate(-133.65deg);
 }
 
 .footer__dec3 {
-	right: -80px;
-	bottom: -450px;
+	top: 71%;
+	right: -15px;
 	background-color: #ffd76f;
 	transform: rotate(-46.35deg);
 }
@@ -76,7 +81,7 @@
 .footer__text {
 	width: 100%;
 	max-width: 840px;
-	margin: 42px auto 95px auto;
+	margin: 42px auto 41px auto;
 
 	font-weight: 500;
 	font-size: 24px;
@@ -85,10 +90,30 @@
 	color: #ffffff99;
 }
 
+.footer__link {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 120%;
+	color: #22282b;
+	padding: 14.5px 24px;
+	border-radius: 11px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #ffd76f;
+	transition:
+		margin ease 0.3s,
+		padding ease 0.3s;
+}
+
+.footer__link:hover {
+	margin: -2px -2px;
+	padding: 16.5px 26px;
+}
+
 .footer__subText {
 	width: 100%;
 	max-width: 840px;
-	margin: 0 auto;
+	margin: 250px auto 0 auto;
 
 	font-weight: 500;
 	font-size: 18px;
@@ -100,7 +125,7 @@
 
 @media screen and (min-width: 1024px) {
 	.footer__container {
-		padding: 100px 50px 50px 50px;
+		padding: 56px 0;
 	}
 
 	.footer__content-container {
@@ -112,21 +137,37 @@
 	}
 
 	.footer__text {
-		margin: 42px auto 150px auto;
+		margin: 24px auto 40px auto;
 	}
 
-	.footer__dec1 {
-		left: -290px;
-		bottom: -150px;
+	.footer__link {
+		width: fit-content;
+	}
+
+	.footer__subText {
+		margin: 61px auto 0 auto;
 	}
 
 	.footer__dec2 {
-		right: -280px;
-		bottom: -150px;
+		top: 50%;
 	}
 
 	.footer__dec3 {
-		right: -275px;
-		bottom: -240px;
+		top: 66%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.footer__dec1 {
+		left: 15px;
+	}
+
+	.footer__dec2 {
+		right: 10px;
+	}
+
+	.footer__dec3 {
+		right: 10px;
+		top: 67%;
 	}
 }

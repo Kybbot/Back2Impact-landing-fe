@@ -17,6 +17,7 @@
 	letter-spacing: -3%;
 	text-align: center;
 	color: var(--color-ink);
+	margin-top: 16px;
 }
 
 .waitlist__lead {
